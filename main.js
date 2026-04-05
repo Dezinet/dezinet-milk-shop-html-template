@@ -1,8 +1,12 @@
 // Navigation & Header Logic
-document.addEventListener('DOMContentLoaded', () => {
+function initNav() {
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('nav-menu');
-  const nav = document.querySelector('nav');
+  
+  if (!toggle || !menu) {
+    console.warn('Navigation elements not found!');
+    return;
+  }
 
   // Create overlay if it doesn't exist
   let overlay = document.querySelector('.nav-menu-overlay');
@@ -11,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.className = 'nav-menu-overlay';
     document.body.appendChild(overlay);
   }
-
 
   const closeMenu = () => {
     toggle.classList.remove('active');
@@ -27,22 +30,27 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   };
 
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      if (menu.classList.contains('active')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (menu.classList.contains('active')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
 
-    // Close menu when clicking a link or overlay
-    overlay.addEventListener('click', closeMenu);
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-  }
-});
+  // Close menu when clicking a link or overlay
+  overlay.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initNav);
+} else {
+  initNav();
+}
 
 let cart = JSON.parse(localStorage.getItem('milk_shop_cart')) || [];
 
@@ -254,9 +262,15 @@ window.closeTopBanner = function() {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAll() {
   injectBanner();
   renderProducts();
   renderCart();
   initCounters();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
