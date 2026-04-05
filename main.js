@@ -239,9 +239,9 @@ function injectBanner() {
   banner.className = 'opensource-banner';
   banner.id = 'top-announcement';
   banner.innerHTML = `
-    This is a free open-source static HTML template. You are free to use, edit, and share this template from our GitHub repository. 
+    This is a free open-source static HTML template. You are free to use, edit, and share this template from our <a href="https://github.com/Dezinet/dezinet-milk-shop-html-template" target="_blank">GitHub repository</a>. 
     If you need this design converted into a professional WordPress site with WooCommerce, or a modern Next.js application with a full backend, reach out to us at 
-    <a href="contact.html">Dezinet</a>.
+    <a href="https://dezinet.com/contact" target="_blank">Dezinet</a>.
     <button class="close-banner" onclick="closeTopBanner()">&times;</button>
   `;
   document.body.prepend(banner);
