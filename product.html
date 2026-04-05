@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Fresh Milk Shop</title>
+  <meta name="description" content="View details of our fresh dairy products.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="index.html" class="logo">FRESH MILK SHOP</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="daily.html">Daily Delivery</a></li>
+      <li><a href="shop.html">Shop Products</a></li>
+      <li><a href="bulk.html">Bulk Buying</a></li>
+      <li><a href="about.html">Our Farm</a></li>
+      <li class="mobile-only"><a href="javascript:void(0)" id="cart-trigger-mobile">🛒 My Cart</a></li>
+      <li class="mobile-only"><a href="auth.html">👤 Sign In / Account</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <div class="cart-btn" id="cart-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cart-count">0</span>
+      </div>
+      <a href="auth.html" class="profile-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Sign In</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container product-detail-section">
+    <div id="product-container" class="product-grid">
+      <!-- Dynamic Content -->
+    </div>
+
+    <!-- Product Sub-tabs -->
+    <div class="tabs-container">
+      <div class="tab-nav">
+        <span class="tab-link active" onclick="switchDetailTab('description')">Description</span>
+        <span class="tab-link" onclick="switchDetailTab('reviews')">Reviews</span>
+        <span class="tab-link" onclick="switchDetailTab('faq')">FAQ</span>
+      </div>
+      <div id="tab-content" class="tab-body">
+        <!-- Loaded dynamically -->
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <header class="section-header">
+        <span class="section-label">You May Also Like</span>
+        <h2 class="section-title">Related Products</h2>
+      </header>
+      <div id="related-grid" class="product-bento">
+        <!-- Loaded dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Fresh Milk Shop</h4>
+          <p>We deliver high quality milk and dairy products from our family farm directly to your home every day.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refunds.html">Refunds Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="contact.html" style="color: inherit; text-decoration: none;">Email: hi@freshmilkshop.in</a></li>
+            <li>Phone: +91 1800-MILK-SHP</li>
+            <li>Address: City Center, New Delhi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Fresh Milk Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal Shell -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="cart-sidebar" id="cart-sidebar">
+      <header class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-modal" id="close-cart">&times;</button>
+      </header>
+      
+      <div id="cart-items-container" class="cart-items-list">
+        <!-- Rendered by JS -->
+        <p class="empty-msg" id="empty-cart-msg">Your cart is empty.</p>
+      </div>
+
+      <footer class="cart-footer">
+        <div class="cart-total">
+          <span>Subtotal</span>
+          <strong id="cart-total-price">₹0</strong>
+        </div>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='checkout.html'">Complete Order</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/products-data.js"></script>
+  <script src="main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

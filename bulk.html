@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk Ordering | Wholesale Dairy | Fresh Milk Shop</title>
+  <meta name="description" content="Buy ghee, paneer, and other dairy products in bulk. 5KG to 50KG tiers for wholesale buyers.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/bulk.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="index.html" class="logo">FRESH MILK SHOP</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="daily.html">Daily Delivery</a></li>
+      <li><a href="shop.html">Shop Products</a></li>
+      <li><a href="bulk.html">Bulk Buying</a></li>
+      <li><a href="about.html">Our Farm</a></li>
+      <li class="mobile-only"><a href="javascript:void(0)" id="cart-trigger-mobile">🛒 My Cart</a></li>
+      <li class="mobile-only"><a href="auth.html">👤 Sign In / Account</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <div class="cart-btn" id="cart-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cart-count">0</span>
+      </div>
+      <a href="auth.html" class="profile-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Sign In</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <header class="bulk-hero">
+      <span class="section-label">Wholesale & Large Orders</span>
+      <h1>Buy in <span>Bulk</span>.</h1>
+      <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">Perfect for restaurants, small dairies, or large families. Save up to 20% on our standard prices.</p>
+    </header>
+
+    <div class="bulk-tier-grid">
+      <div class="bulk-tier-card">
+        <h2>Tier 1</h2>
+        <div class="amount">5-10 KG</div>
+        <p class="text-secondary" style="margin-bottom: 25px;">Small Businesses & Large Parties</p>
+        <ul>
+          <li>Special Bulk Price</li>
+          <li>Free Delivery in City</li>
+          <li>Basic Quality Check</li>
+        </ul>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='#bulk-inquiry'">Get a Quote</button>
+      </div>
+
+      <div class="bulk-tier-card featured" style="border-color: var(--accent-gold); box-shadow: var(--shadow); transform: scale(1.05);">
+        <h2>Tier 2</h2>
+        <div class="amount">10-25 KG</div>
+        <p class="text-secondary" style="margin-bottom: 25px;">Regular Restaurant Supplies</p>
+        <ul>
+          <li>Extra Discount Tier</li>
+          <li>Priority Morning Delivery</li>
+          <li>Dedicated Account Manager</li>
+          <li>Quality Certificate</li>
+        </ul>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='#bulk-inquiry'">Claim Discount</button>
+      </div>
+
+      <div class="bulk-tier-card">
+        <h2>Tier 3</h2>
+        <div class="amount">25+ KG</div>
+        <p class="text-secondary" style="margin-bottom: 25px;">Wholesale Partners</p>
+        <ul>
+          <li>Best Possible Rates</li>
+          <li>Custom Packaging Labels</li>
+          <li>Direct Farm Pickup Option</li>
+        </ul>
+        <button class="btn-outline" style="width: 100%;" onclick="window.location.href='#bulk-inquiry'">Talk to us</button>
+      </div>
+    </div>
+
+    <div class="bulk-inquiry-box" id="bulk-inquiry">
+      <div class="inquiry-text">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to grow your <span>business?</span></h2>
+        <p class="text-secondary" style="margin-bottom: 30px;">Tell us about your needs and we will get back to you with a custom price plan. We deliver fresh milk, ghee, and paneer daily to over 50 businesses in New Delhi.</p>
+        <div class="stat-card" style="padding: 20px;">
+          <h3>+91 1800-MILK-SHP</h3>
+          <p>Wholesale Hotline</p>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+          <label>Company Name</label>
+          <input type="text" placeholder="The Cafe Delhi" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 15px; border-radius: 12px; color: #fff;">
+        </div>
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+          <label>Required Product</label>
+          <select style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 15px; border-radius: 12px; color: #fff; appearance: none; cursor: pointer;">
+            <option>Fresh Milk (Daily)</option>
+            <option>Pure Ghee (Bulk)</option>
+            <option>Fresh Paneer (Bulk)</option>
+            <option>Mixed Order</option>
+          </select>
+        </div>
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+          <label>Expected Quantity (Per Month)</label>
+          <input type="text" placeholder="e.g. 50 KG" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 15px; border-radius: 12px; color: #fff;">
+        </div>
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px;">
+          <label>Your Message</label>
+          <textarea placeholder="Tell us more about your business..." style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 15px; border-radius: 12px; color: #fff; min-height: 100px; resize: vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn-luxe" style="width: 100%;">Send Inquiry</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Fresh Milk Shop</h4>
+          <p>We deliver high quality milk and dairy products from our family farm directly to your home every day.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping Policy</a></li>
+            <li><a href="daily.html">Pause Subscription</a></li>
+            <li><a href="bulk.html">Bulk Buy Terms</a></li>
+            <li><a href="refunds.html">Refunds</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>Email: hi@freshmilkshop.in</li>
+            <li>Phone: +91 1800-MILK-SHP</li>
+            <li>Address: City Center, New Delhi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Fresh Milk Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

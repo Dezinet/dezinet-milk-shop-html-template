@@ -1,0 +1,92 @@
+.bulk-hero {
+  padding: 150px 0 80px;
+  text-align: center;
+}
+
+.bulk-hero h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.bulk-hero span {
+  color: var(--accent-gold);
+}
+
+.bulk-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 80px;
+}
+
+.bulk-tier-card {
+  background: var(--surface-dark);
+  border: 1px solid var(--border);
+  padding: 50px 40px;
+  border-radius: 40px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.bulk-tier-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-gold);
+}
+
+.bulk-tier-card h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--accent-gold);
+}
+
+.bulk-tier-card .amount {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.bulk-tier-card ul {
+  list-style: none;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.bulk-tier-card ul li {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulk-tier-card ul li::before {
+  content: '✓';
+  color: var(--accent-gold);
+}
+
+.bulk-inquiry-box {
+  background: var(--surface-dark);
+  border: 1px solid var(--border);
+  padding: 80px;
+  border-radius: 50px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+}
+
+@media (max-width: 991px) {
+  .bulk-tier-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bulk-inquiry-box {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  
+  .bulk-hero h1 {
+    font-size: 3.5rem;
+  }
+}

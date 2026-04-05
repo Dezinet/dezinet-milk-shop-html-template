@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Farm | The Story of Fresh Milk Shop</title>
+  <meta name="description" content="A complete tour of our farm. See our healthy cows, strong buffaloes, and meeting our farmers. Pure and honest dairy.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="index.html" class="logo">FRESH MILK SHOP</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="daily.html">Daily Delivery</a></li>
+      <li><a href="shop.html">Shop Products</a></li>
+      <li><a href="bulk.html">Bulk Buying</a></li>
+      <li><a href="about.html">Our Farm</a></li>
+      <li class="mobile-only"><a href="javascript:void(0)" id="cart-trigger-mobile">🛒 My Cart</a></li>
+      <li class="mobile-only"><a href="auth.html">👤 Sign In / Account</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <div class="cart-btn" id="cart-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cart-count">0</span>
+      </div>
+      <a href="auth.html" class="profile-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Sign In</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="about-page">
+    <!-- Hero -->
+    <header class="about-hero-v2">
+      <div class="container">
+        <span class="section-label">Real Farm, Real Story</span>
+        <h1>Step into <span>Our Farm</span></h1>
+        <p>Come see where your food comes from. We have nothing to hide. Only fresh grass, clean air, and happy animals.</p>
+      </div>
+    </header>
+
+    <!-- 1. The Land -->
+    <section class="farm-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img">
+            <img src="product_images/farm_landscape.png" alt="Indian Dairy Farm Landscape">
+          </div>
+          <div class="about-text">
+            <h2>The Green Land</h2>
+            <p>This is where it all begins. Our farm is spread across many acres of green land in North India. We grow our own food for the animals here.</p>
+            <p><strong>Image Description:</strong> Above, you can see our clean farm sheds and green fields. It is a quiet place far away from city pollution, where the air is fresh and the soil is healthy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The Cows -->
+    <section class="farm-section alt-bg">
+      <div class="container">
+        <div class="about-grid reverse">
+          <div class="about-img">
+            <img src="product_images/gir_cows.png" alt="Healthy Gir Cows">
+          </div>
+          <div class="about-text">
+            <h2>Our Beloved Gir Cows</h2>
+            <p>We take care of the pure Gir breed. These cows are known for their health and the special A2 protein in their milk.</p>
+            <p><strong>Image Description:</strong> Here are our Gir cows. Notice their unique humps and ears. They spend their day walking around the farm and eating fresh organic grass. We never use any harmful injections on them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. The Buffaloes -->
+    <section class="farm-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img">
+            <img src="product_images/murrah_buffaloes.png" alt="Murrah Buffaloes">
+          </div>
+          <div class="about-text">
+            <h2>The Strong Murrah Buffaloes</h2>
+            <p>For those who love thick and creamy milk, we have the best Murrah buffaloes. Their milk is best for making Ghee and Paneer at home.</p>
+            <p><strong>Image Description:</strong> These black buffaloes are the pride of our farm. They are kept in very clean areas with cool water. They are strong, healthy, and give milk that is full of natural cream.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. The Farmer -->
+    <section class="farm-section alt-bg">
+      <div class="container">
+        <div class="about-grid reverse">
+          <div class="about-img">
+            <img src="product_images/milking_process.png" alt="Traditional Farmer Caring for Cows">
+          </div>
+          <div class="about-text">
+            <h2>Love and Care</h2>
+            <p>Machines help us keep things clean, but the heart of our farm is our people. Our farmers know every animal by their name.</p>
+            <p><strong>Image Description:</strong> You can see one of our senior farmers caring for a cow. We believe that a cow that feels loved gives the healthiest milk for your children. We follow a very hygienic process from start to finish.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quality Section -->
+    <section class="quality-highlights container" style="margin-top: 100px;">
+      <h2 style="text-align: center; margin-bottom: 50px;">Why we are different?</h2>
+      <div class="stats-grid">
+          <div class="stat-card">
+            <h3 style="font-size: 1.5rem;">Pure Food</h3>
+            <p>Our animals eat only natural grass and grains. No chemicals ever.</p>
+          </div>
+          <div class="stat-card">
+            <h3 style="font-size: 1.5rem;">Fast Delivery</h3>
+            <p>From milking to your door in less than 5 hours. Always cold.</p>
+          </div>
+          <div class="stat-card">
+            <h3 style="font-size: 1.5rem;">No Mixing</h3>
+            <p>We don't mix water or powder. You get exactly what the cow gives.</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Final Visit CTA -->
+    <section class="visit-cta container">
+      <div class="cta-box">
+        <h2>Book a Farm Visit</h2>
+        <p>Want to see all this with your own eyes? Bring your kids to our farm this Sunday. We will show you everything and even let you taste the fresh milk right here.</p>
+        <a href="contact.html" class="btn-luxe">Click to Message Us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Fresh Milk Shop</h4>
+          <p>A family farm dedicated to purity. We feed what we produce to our own children first.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refunds.html">Refunds Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="contact.html" style="color: inherit; text-decoration: none;">Email: hi@freshmilkshop.in</a></li>
+            <li>Phone: +91 1800-MILK-SHP</li>
+            <li>Address: City Center, New Delhi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Fresh Milk Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal Shell -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="cart-sidebar" id="cart-sidebar">
+      <header class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-modal" id="close-cart">&times;</button>
+      </header>
+      
+      <div id="cart-items-container" class="cart-items-list">
+        <!-- Rendered by JS -->
+        <p class="empty-msg" id="empty-cart-msg">Your cart is empty.</p>
+      </div>
+
+      <footer class="cart-footer">
+        <div class="cart-total">
+          <span>Subtotal</span>
+          <strong id="cart-total-price">₹0</strong>
+        </div>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='checkout.html'">Complete Order</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/products-data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Fresh Milk Shop</title>
+  <meta name="description" content="Complete your purchase of fresh dairy products.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">FRESH MILK SHOP</a>
+  </nav>
+
+  <main class="checkout-section">
+    <div class="container overflow-hidden">
+      <header class="section-header">
+        <span class="section-label">Final Step</span>
+        <h1 class="section-title">Checkout</h1>
+      </header>
+
+      <div class="checkout-grid">
+        <div class="checkout-form-container">
+          <form class="checkout-form contact-form" onsubmit="handlePlaceOrder(event)">
+            <h2>1. Shipping Details</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Arjun" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Sharma" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+91 99990 XXXXX" required>
+            </div>
+            <div class="form-group">
+              <label>Full Address</label>
+              <textarea placeholder="House Number, Building Name, Street..." required></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>City</label>
+                <input type="text" value="New Delhi" disabled>
+              </div>
+              <div class="form-group">
+                <label>ZIP/PIN Code</label>
+                <input type="text" placeholder="110001" required>
+              </div>
+            </div>
+
+            <h2 style="margin-top: 50px;">2. Payment Method</h2>
+            <div class="payment-methods">
+              <label class="payment-option active">
+                <input type="radio" name="payment" value="online" checked style="accent-color: var(--accent-gold);">
+                <span>Pay Online (UPI, Card, Net Banking)</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="cod" style="accent-color: var(--accent-gold);">
+                <span>Cash on Delivery</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-luxe" style="width: 100%; margin-top: 30px;">Place Your Order</button>
+          </form>
+        </div>
+
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div id="checkout-items" class="summary-items">
+            <!-- Rendered by JS -->
+          </div>
+          <div class="summary-totals">
+            <div class="total-row">
+              <span>Subtotal</span>
+              <strong id="summary-subtotal">₹0</strong>
+            </div>
+            <div class="total-row">
+              <span>Shipping Fee</span>
+              <strong id="summary-shipping">₹50</strong>
+            </div>
+            <div class="total-row grand-total">
+              <span>Grand Total</span>
+              <strong id="summary-total">₹50</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Fresh Milk Shop</h4>
+          <p>We deliver high quality milk and dairy products from our family farm directly to your home every day.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="refunds.html">Refunds Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="contact.html" style="color: inherit; text-decoration: none;">Email: hi@freshmilkshop.in</a></li>
+            <li>Phone: +91 1800-MILK-SHP</li>
+            <li>Address: City Center, New Delhi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Fresh Milk Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal Shell -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="cart-sidebar" id="cart-sidebar">
+      <header class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-modal" id="close-cart">&times;</button>
+      </header>
+      
+      <div id="cart-items-container" class="cart-items-list">
+        <!-- Rendered by JS -->
+        <p class="empty-msg" id="empty-cart-msg">Your cart is empty.</p>
+      </div>
+
+      <footer class="cart-footer">
+        <div class="cart-total">
+          <span>Subtotal</span>
+          <strong id="cart-total-price">₹0</strong>
+        </div>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='checkout.html'">Complete Order</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/products-data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    /**
+     * Handle checkout page rendering
+     */
+    function renderCheckout() {
+      const container = document.getElementById('checkout-items');
+      const subtotalEl = document.getElementById('summary-subtotal');
+      const totalEl = document.getElementById('summary-total');
+      const shippingEl = document.getElementById('summary-shipping');
+
+      if (!container) return;
+
+      const cartData = JSON.parse(localStorage.getItem('milk_shop_cart')) || [];
+      
+      if (cartData.length === 0) {
+        container.innerHTML = '<p>Your cart is empty.</p>';
+        return;
+      }
+
+      let subtotal = 0;
+      container.innerHTML = cartData.map(item => {
+        subtotal += item.price;
+        return `
+          <div class="summary-item">
+            <span>${item.name}</span>
+            <strong>₹${item.price}</strong>
+          </div>
+        `;
+      }).join('');
+
+      const shipping = subtotal > 500 ? 0 : 50;
+      subtotalEl.innerText = `₹${subtotal}`;
+      shippingEl.innerText = shipping === 0 ? 'FREE' : `₹${shipping}`;
+      totalEl.innerText = `₹${subtotal + shipping}`;
+    }
+
+    function handlePlaceOrder(e) {
+      e.preventDefault();
+      localStorage.removeItem('milk_shop_cart');
+      window.location.href = 'index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', renderCheckout);
+  </script>
+</body>
+</html>

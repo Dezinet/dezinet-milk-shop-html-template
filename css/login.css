@@ -1,0 +1,120 @@
+/* --- Auth Page Context --- */
+.auth-page {
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1), transparent);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 4vw;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: var(--surface-dark);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  padding: 60px 50px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+  animation: revealUp 0.8s ease-out;
+}
+
+.auth-card h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  letter-spacing: -1px;
+}
+
+.auth-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+/* --- Form Elements --- */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+.form-footer {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.text-link {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.auth-switch a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* --- View Toggle Logic --- */
+.auth-view {
+  display: none;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.auth-view.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 500px) {
+  .auth-card {
+    padding: 40px 30px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+}

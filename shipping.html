@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Policy | Fresh Milk Shop</title>
+  <meta name="description" content="Learn about our delivery areas, timings, and shipping charges for fresh milk and dairy.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/legal.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="index.html" class="logo">FRESH MILK SHOP</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="daily.html">Daily Delivery</a></li>
+      <li><a href="shop.html">Shop Products</a></li>
+      <li><a href="bulk.html">Bulk Buying</a></li>
+      <li class="mobile-only"><a href="javascript:void(0)" id="cart-trigger-mobile">🛒 My Cart</a></li>
+      <li class="mobile-only"><a href="auth.html">👤 Sign In / Account</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <div class="cart-btn" id="cart-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cart-count">0</span>
+      </div>
+      <a href="auth.html" class="profile-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Sign In</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="legal-section">
+    <div class="container legal-content">
+      <h1>Shipping <span>Policy</span>.</h1>
+      
+      <div class="legal-meta">
+        <span>Last Updated: April 2026</span>
+        <span>|</span>
+        <span>Version: 1.0</span>
+      </div>
+
+      <div class="legal-body">
+        <h2>How We Deliver Freshness</h2>
+        <p>At Fresh Milk Shop, we pride ourselves on getting fresh dairy products to your door in the shortest time possible. Here is how our shipping and delivery work.</p>
+
+        <h3>1. Delivery Areas</h3>
+        <p>We currently deliver across New Delhi and surrounding areas. To check if we deliver to your home, please enter your PIN code on the checkout page.</p>
+
+        <h3>2. Delivery Timings</h3>
+        <p>We deliver fresh milk every morning to ensure you have it for breakfast.</p>
+        <ul>
+          <li><strong>Daily Subscriptions:</strong> Delivered between 5:00 AM and 8:00 AM.</li>
+          <li><strong>One-time Shop Orders:</strong> Delivered within 24 hours of placing the order.</li>
+          <li><strong>Bulk Orders:</strong> Delivered within 2-3 business days.</li>
+        </ul>
+
+        <h3>3. Shipping Costs</h3>
+        <p>We keep our shipping costs low and fair:</p>
+        <ul>
+          <li><strong>Daily Subscriptions:</strong> Free delivery on all monthly plans.</li>
+          <li><strong>Standard Shop Orders:</strong> ₹50 flat fee for orders below ₹500. Free for orders above ₹500.</li>
+          <li><strong>Bulk Orders:</strong> Shipping cost depends on weight and distance. It will be shown at checkout.</li>
+        </ul>
+
+        <h3>4. Order Tracking</h3>
+        <p>Once your order leaves our farm, we will send you a text message with a link. You can use this link to see exactly where your delivery is on a map.</p>
+
+        <h3>5. Freshness Guarantee</h3>
+        <p>If you are not at home when we deliver, we leave your products in a safe place. We use special insulated bags for ghee and paneer to keep them fresh for up to 2 hours outside. We recommend picking up your delivery as soon as possible.</p>
+        
+        <h3>6. Issues with Delivery</h3>
+        <p>If your delivery is late or you have any issues, please call us immediately at +91 1800-MILK-SHP.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Fresh Milk Shop</h4>
+          <p>We deliver high quality milk and dairy products from our family farm directly to your home every day.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping Policy</a></li>
+            <li><a href="daily.html">Pause Subscription</a></li>
+            <li><a href="bulk.html">Bulk Buy Terms</a></li>
+            <li><a href="refunds.html">Refunds</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>Email: hi@freshmilkshop.in</li>
+            <li>Phone: +91 1800-MILK-SHP</li>
+            <li>Address: City Center, New Delhi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Fresh Milk Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal Shell -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="cart-sidebar" id="cart-sidebar">
+      <header class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-modal" id="close-cart">&times;</button>
+      </header>
+      
+      <div id="cart-items-container" class="cart-items-list">
+        <!-- Rendered by JS -->
+        <p class="empty-msg" id="empty-cart-msg">Your cart is empty.</p>
+      </div>
+
+      <footer class="cart-footer">
+        <div class="cart-total">
+          <span>Subtotal</span>
+          <strong id="cart-total-price">₹0</strong>
+        </div>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='checkout.html'">Complete Order</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

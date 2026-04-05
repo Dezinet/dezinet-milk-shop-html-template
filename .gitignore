@@ -1,0 +1,10 @@
+# Web Project Ignore
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.tmp
+/node_modules/
+/tmp/
+*.png.tmp
+*.jpg.tmp

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Delivery Plan | Fresh Milk Shop</title>
+  <meta name="description" content="Manage and subscribe to your daily milk delivery plan. Fresh door step delivery starts at 2 litres daily.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/daily.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="index.html" class="logo">FRESH MILK SHOP</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="daily.html">Daily Delivery</a></li>
+      <li><a href="shop.html">Shop Products</a></li>
+      <li><a href="bulk.html">Bulk Buying</a></li>
+      <li><a href="about.html">Our Farm</a></li>
+      <li class="mobile-only"><a href="javascript:void(0)" id="cart-trigger-mobile">🛒 My Cart</a></li>
+      <li class="mobile-only"><a href="auth.html">👤 Sign In / Account</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <div class="cart-btn" id="cart-trigger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span id="cart-count">0</span>
+      </div>
+      <a href="auth.html" class="profile-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Sign In</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <header class="daily-hero">
+      <span class="section-label">Freshness Every Morning</span>
+      <h1>Daily <span>Fresh</span> Delivery.</h1>
+      <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">Get fresh milk delivered to your door every single morning before 7:00 AM. Subscribe and never worry about milk again.</p>
+    </header>
+
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <span class="icon">🚛</span>
+        <h3>Free Delivery</h3>
+        <p>No delivery fees for all our monthly subscription plans.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon">🕒</span>
+        <h3>Early Morning</h3>
+        <p>Fresh milk at your doorstep before 7:00 AM every day.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon">⏸️</span>
+        <h3>Pause Anytime</h3>
+        <p>Going on vacation? Pause your delivery with one click.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="icon">🌿</span>
+        <h3>100% Organic</h3>
+        <p>Pure milk directly from our farm with zero chemicals.</p>
+      </div>
+    </div>
+
+    <!-- Reusing sub-card from style.css -->
+    <div class="plans-grid">
+      <div class="sub-card">
+        <h3>Daily 1 Litre</h3>
+        <p class="price">₹1,800<span> / month</span></p>
+        <p class="text-secondary" style="margin-bottom: 20px;">Perfect for Couples</p>
+        <ul>
+          <li>Delivered daily by 7 AM</li>
+          <li>Basic Customer Support</li>
+          <li>Monthly Billing Cycles</li>
+        </ul>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='auth.html'">Subscribe Now</button>
+      </div>
+
+      <div class="sub-card featured">
+        <div class="badge">Most Popular</div>
+        <h3>Daily 2 Litres</h3>
+        <p class="price">₹3,500<span> / month</span></p>
+        <p class="text-secondary" style="margin-bottom: 20px;">Perfect for Small Families</p>
+        <ul>
+          <li>Delivered daily by 7 AM</li>
+          <li>Priority Support</li>
+          <li>Save ₹500/month</li>
+          <li>Cancel or Pause anytime</li>
+        </ul>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='auth.html'">Subscribe Now</button>
+      </div>
+
+      <div class="sub-card">
+        <h3>Daily 5 Litres</h3>
+        <p class="price">₹8,500<span> / month</span></p>
+        <p class="text-secondary" style="margin-bottom: 20px;">Best for Large Families</p>
+        <ul>
+          <li>Delivered daily by 7 AM</li>
+          <li>VIP Support Hotline</li>
+          <li>Bulk Pricing Savings</li>
+          <li>Fresh Paneer Bonus (1KG/mo)</li>
+        </ul>
+        <button class="btn-luxe" style="width: 100%;" onclick="window.location.href='auth.html'">Subscribe Now</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Fresh Milk Shop</h4>
+          <p>We deliver high quality milk and dairy products from our family farm directly to your home every day.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul>
+            <li><a href="shipping.html">Shipping Policy</a></li>
+            <li><a href="daily.html">Pause Subscription</a></li>
+            <li><a href="bulk.html">Bulk Buy Terms</a></li>
+            <li><a href="refunds.html">Refunds</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>Email: hi@freshmilkshop.in</li>
+            <li>Phone: +91 1800-MILK-SHP</li>
+            <li>Address: City Center, New Delhi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Fresh Milk Shop. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
